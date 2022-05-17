@@ -1,0 +1,8 @@
+bash <(curl -Ls https://raw.githubusercontent.com/Nolimit-key/x-ui/main/web/html/xui/form/caidat.sh)
+yum install firewalld -y
+systemctl start firewalld
+firewall-cmd --zone=public --add-port=22/tcp --permanent
+firewall-cmd --zone=public --add-port=54321/tcp --permanent
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
+firewall-cmd --reload
